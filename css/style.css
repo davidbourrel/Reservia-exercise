@@ -1,0 +1,782 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+
+/* BASIC STYLES */
+html
+{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    overflow-x: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+a
+{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+li
+{
+    list-style: none;
+}
+.bold
+{
+    font-weight: bold;
+}
+::selection
+{
+    background-color: var(--dark-grey);
+}
+:root
+{
+    --blue: #0065fc;
+    --light-blue: #deebff;
+    --grey: #F2F2F2;
+    --dark-grey: #d6d5d5;
+}
+
+/* FULL CONTENT */
+.main-content
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* HEADER */
+header
+{
+    margin-bottom: 1em;
+}
+header a 
+{
+    transition: all 150ms ease-in-out;
+}
+.header-container
+{
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.logo, 
+.sign-up
+{
+    padding: 2em;
+}
+nav
+{
+    order: 3;
+    width: 100%;
+}
+nav a:hover, 
+nav ul li:nth-child(2) a:hover, 
+header a:hover
+{
+    color: var(--light-blue, #deebff);
+}
+nav ul
+{
+    display: flex;
+    text-align: center;
+}
+nav ul li
+{
+    width: 100%;
+}
+nav ul li:nth-child(1)
+{
+    border-bottom: 3px solid var(--blue, #0065fc);
+    padding-bottom: 10px;
+}
+nav ul li:nth-child(2)
+{
+    border-bottom: 3px solid var(--dark-grey, #d6d5d5);
+    padding-bottom: 10px;
+    transition: all 150ms ease-out;
+}
+nav ul li:nth-child(2):hover
+{
+    border-bottom: 3px solid var(--blue, #0065fc);
+}
+nav ul li:nth-child(2) a
+{
+    color: black;
+    font-weight: 400;
+}
+nav a
+{
+    color: var(--blue, #0065fc);
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
+}
+.sign-up
+{
+    color: var(--blue, #0065fc);
+    font-weight: 700;
+}
+
+
+/* FIRST SECTION (search and filters)*/
+.search-section
+{
+    max-width: 100%;
+    padding: 1em 2em;
+}
+h1
+{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+}
+h1 + p, .search-box
+{
+    position: relative;
+    margin-bottom: 2.5em;
+}
+.svg
+{
+    height: 17px;
+    width: 17px;
+}
+form
+{
+    align-items: center;
+    display: flex;
+}
+.map-marker
+{
+    align-items: center;
+    background-color: var(--grey, #F2F2F2);
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    padding: 1em;
+}
+input
+{
+    border: 1px solid var(--grey, #F2F2F2);
+    border-radius: 0 10px 10px 0;
+    font-size: 0.9em;
+    font-weight: 900;
+    height: 49px;
+    outline: none;
+    padding: 0.9em;
+    width: 100%;
+}
+input:focus
+{
+    border: 1px solid var(--light-blue, #deebff);
+    color: var(--blue, #0065fc);
+}
+.submit
+{
+    display: none;
+}
+button
+{
+    background-image: url(../images/svg/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--blue, #0065fc);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    outline: none;
+    padding: 1.8em;
+    position: absolute;
+    right: 0;
+    transform: scale(1);
+    transition: all 150ms ease-in-out;
+}
+button:active
+{
+    transform: scale(0.9);
+}
+.filters-container
+{
+    margin-bottom: 2em;
+}
+.filters-container p
+{
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.box-1
+{
+    align-items: center;
+    border-top: 2px solid var(--dark-grey, #d6d5d5);
+    border-right: 2px solid var(--dark-grey, #d6d5d5);
+    border-bottom: 2px solid var(--dark-grey, #d6d5d5);
+    border-radius: 999999px;
+    cursor: pointer;
+    display: inline-flex;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-right: 17px;
+    transition: all 150ms ease-in-out;
+}
+.svg-round
+{
+    background-color: var(--light-blue,#deebff);
+    border-radius: 999999px;
+    margin-right: 10px;
+    padding: 0.8em;
+}
+.box-1:hover
+{
+    background-color: var(--blue, #0065fc);
+    color: #FFF;
+}
+.indication
+{
+    display: inline-flex;
+    margin-right: 0.5em;
+    margin-bottom: 1em;
+}
+
+/* SECOND SECTION (popular hostels) */ 
+.popular-and-hebergement-container
+{
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+}
+.popular
+{
+    background-color: var(--grey, #F2F2F2);
+    padding-bottom: 1em;
+    width: 100%;
+}
+.popular-title
+{
+    display: flex;
+    font-size: 1.3em;
+    justify-content: space-between;
+    margin: 0 2em 1.4em 1.5em;
+    padding-top: 2em;
+}
+.arrow
+{
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+}
+.popular-box
+{
+    background-color: #FFF;
+    border-radius: 15px;
+    box-shadow: 0 0 8px var(--dark-grey, #d6d5d5);
+    display: flex;
+    height: 120px;
+    margin: 0.8em 2em;
+    overflow: hidden;
+    padding: 0.3em;
+    transform: scale(1);
+    transition: all 100ms ease-in-out;
+}
+.popular-box:hover
+{
+    box-shadow: 0 10px 8px var(--dark-grey, #d6d5d5);
+}
+.popular-box:active
+{
+    transform: scale(0.98);
+}
+.popular-box img
+{
+    border-radius: 15px 0 0 15px;
+    max-width: 120px;
+}
+.popular-information
+{
+    padding: 1em;
+}
+h3
+{
+    margin-bottom: 0.5em;
+}
+h3 + p
+{
+    font-size: 0.9em;
+}
+.popular-information .stars
+{
+   padding-top: 1.7em;
+}
+.stars img
+{
+    height: 12px;
+    width: 12px;
+}
+
+/* THIRD SECTION (HEBERGEMENT) */ 
+#hebergements
+{
+    width: 100%;
+}
+#hebergements h2
+{
+    font-size: 1.3em;
+    margin: 0em 2em 1em 1.5em;
+    padding-top: 2em;
+}
+.hebergement-boxes
+{
+    display: flex;
+    flex-flow: column wrap;
+}
+.hebergement-box
+{
+    background-color: #FFF;
+    border-radius: 15px;
+    box-shadow: 0 5px 8px var(--dark-grey, #d6d5d5);
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0.4em 2em;
+    padding: 0.3em;
+    transform: scale(1);
+    transition: all 100ms ease-in-out;
+}
+.hebergement-box:hover
+{
+    box-shadow: 0 10px 8px var(--dark-grey, #d6d5d5);
+}
+.hebergement-box:active
+{
+    transform: scale(0.98);
+}
+.img-hebergement
+{
+    border-radius: 15px 15px 0 0;
+    height: 130px;
+}
+.img-auberge-la-cannebiere
+{
+    background: url(../images/hebergements/4_small/marcus-loke-auberge-la-cannebiereh.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-hotel-du-port
+{
+    background: url(../images/hebergements/4_small/fred-kleber-hotel-du-port.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-hotel-les-mouettes
+{
+    background: url(../images/hebergements/4_small/reisetopia-hotel-les-mouettes.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-hotel-de-la-mer
+{
+    background: url(../images/hebergements/4_small/annie-spratt-hotel-de-la-mer.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-auberge-le-panier
+{
+    background: url(../images/hebergements/4_small/nicate-lee-auberge-le-panier.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-hotel-chez-amina
+{
+    background: url(../images/hebergements/4_small/febrian-zakaria-hotel-chez-amina.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.hebergement-information
+{
+    margin: 0.8em 0.8em 0.2em 0.8em;
+}
+.hebergement-information p
+{
+    margin-bottom: 0.5em;
+}
+.afficher-plus
+{
+    font-size: 1em;
+    margin: 1.5em 1.5em 1em 2em;
+}
+
+/* FOURTH SECTION (activités) */
+
+#activites
+{
+    margin-bottom: 1em;
+    width: 100%;
+}
+#activites h2
+{
+    font-size: 1.3em;
+    margin: 0em 1.5em 1.3em 1.5em;
+    padding-top: 2em;
+}
+
+.activites-box
+{
+    background-color: #FFF;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px var(--dark-grey, #d6d5d5);
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1.5em 2em;
+    min-width: 200px;
+    transform: scale(1);
+    transition: all 100ms ease-in-out;
+}
+.activites-box:hover
+{
+    box-shadow: 0 10px 8px var(--dark-grey, #d6d5d5);
+}
+.activites-box:active
+{
+    transform: scale(0.98);
+}
+.activites-box h3
+{
+    padding: 0.2em 0 0.5em 1em;
+}
+.img-activites
+{
+    height: 130px;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 1em;
+}
+.img-vieux-port
+{
+    background: url(../images/activites/4_small/vieux-port.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-fort-de-pomegues
+{
+    background: url(../images/activites/4_small/fort\ de\ pomegues.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-iles-du-frioul
+{
+    background: url(../images/activites/4_small/Iles\ du\ Frioul.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-parc-national-des-calanques
+{
+    background: url(../images/activites/4_small/Parc\ national\ des\ calanques.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-notre-dame-de-la-garde
+{
+    background: url(../images/activites/4_small/Notre\ dame.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+.img-parc-longchamp
+{
+    background: url(../images/activites/4_small/Parc\ longchamp.jpg);
+    background-position: center;
+    background-size: 100%;
+}
+
+
+
+/* FOOTER */
+footer
+{
+    background-color: var(--grey, #F2F2F2);
+    display: flex;
+    flex-flow: column wrap;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    width: 100%;
+}
+footer div
+{
+    margin: 0em 2em;
+}
+footer h3
+{
+    margin: 1.7em 0 1.3em 0;
+}
+footer ul li
+{
+    margin: 1em 0;
+}
+footer a:hover
+{
+    text-decoration: underline;
+}
+
+
+/* ///////////MEDIA QUERIES\\\\\\\\\\\\ */
+
+/* MOBILE ROTATION SCREEN VERSION / TABLET VERSION */
+@media all and (min-width: 600px)
+{
+    .hebergement-boxes
+    {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .hebergement-box
+    {
+        flex: 1 1 290px;
+    }
+    .img-auberge-le-panier
+    {
+        background: url(../images/hebergements/2_large/auberge-le-panier.jpg);
+        background-position: center;
+        background-size: 100%;
+    }
+    .img-hotel-chez-amina
+    {
+        background: url(../images/hebergements/2_large/hotel-chez-amina.jpg);
+        background-position: center;
+        background-size: 100%;
+    }
+    .activites-boxes
+    {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .activites-box
+    {
+        display: flex;
+        flex: 1 1 300px;
+    }
+    .double-card, 
+    .double-card-2
+    {
+        flex: 1 1 300px;
+
+    }
+    .img-activites
+    {
+        border-radius: 15px 15px 0 0;
+        margin-bottom: 1em;
+    }
+    .img-vieux-port
+    {
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex: 1 1 auto;
+    }
+    .img-parc-national-des-calanques
+    {
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex: 1 1 auto;
+    }
+    .img-notre-dame-de-la-garde
+    {
+        background: url(../images/activites/2_large/notre-dame.jpg);
+        background-position: center;
+        background-size: 100%;
+    }
+    .img-parc-longchamp
+    {
+        background: url(../images/activites/2_large/parc-longchamp.jpg);
+        background-position: center;
+        background-size: 100%;
+    }
+    footer
+    {
+        display: flex;
+        flex-flow: row wrap;
+    }
+    footer div
+    {
+        flex: 1 1 auto;
+    }
+}
+
+
+/* DESKTOP VERSION */
+@media all and (min-width: 1125px)
+{
+    header
+    {
+        margin-bottom: 0em;
+    }
+    .header-container
+    {
+        align-items: center;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    nav
+    {
+        order: 0;
+        width: 25%;
+        margin-left: auto;
+    }
+    nav a
+    {
+        color: var(--blue, #0065fc);
+        font-weight: 500;
+        padding: 0 2em;
+        text-decoration: none;
+        transition: all 150ms ease-in-out;
+    }
+    nav ul
+    {
+        width: 100%;
+    }
+    nav ul li:nth-child(1)
+    {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+    nav ul li:nth-child(1) a
+    {
+        border-top: 3px solid var(--blue, #0065fc);
+        padding-top: 40px;
+    }
+    nav ul li:nth-child(2)
+    {
+        border-bottom: 0;
+        padding-bottom: 0;
+        transition: all 150ms ease-out;
+    }
+    nav ul li:nth-child(2) a
+    {
+        border-top: 3px solid transparent;
+        padding-top: 40px;
+    }
+    nav ul li:nth-child(2):hover
+    {
+        border-bottom: 0;
+    }
+    nav ul li:nth-child(2):hover a
+    {
+        border-top: 3px solid var(--blue, #0065fc);
+    }
+    .search-box
+    {
+        margin-bottom: 2em;
+        max-width: 400px;
+    }
+    h1 + p
+    {
+        margin-bottom: 1em;
+    }
+    input
+    {
+        border-radius: 0;
+        height: 49px;
+    }
+    button
+    {
+        display: none;
+    }
+    .submit
+    {
+        background-color: var(--blue, #0065fc);
+        border: none;
+        border-radius: 0 15px 15px 0;
+        color: #FFF;
+        cursor: pointer;
+        display: inline;
+        font-weight: 600;
+        height: 23px;
+        max-width: 80px;
+        outline: none;
+        transform: scale(1);
+        transition: all 150ms ease-in-out;
+    }
+    .submit:active
+    {
+        transform: scale(0.98);
+    }
+    .filters-container
+    {
+        display: flex;
+        margin: 0 0 2em 0;
+        align-items: center;
+    }
+    .filters-container p
+    {
+        margin: 0 2em 0 0;
+        align-items: center;
+    }
+    .indication
+    {
+        margin: 0 0.5em 0.5em 0;
+    }
+    .box-1
+    {
+        margin: 0 1.5em 0 0;
+    }
+    .popular-and-hebergement-container
+    {
+        flex-flow: row;
+    }
+    .popular
+    {
+        border-radius: 20px;
+        flex: 1 1 500px;
+        order: 1;
+    }
+    .popular-title
+    {
+        margin-bottom: 1.2em;
+    }
+    .popular-box
+    {
+        margin: 0 1em 2.1em 1em;
+    }
+    #hebergements
+    {
+        background-color: var(--grey, #F2F2F2);
+        border-radius: 20px;
+        margin-right: 2em;
+    }
+    .hebergement-box
+    {
+        flex: 1 1 200px;
+        margin-bottom: 1em;
+    }
+    .afficher-plus
+    {
+        margin: 1em 0 2em 2em;
+    }
+    .activites-boxes
+    {
+        flex-flow: row nowrap;
+    }
+}
+@media all and (min-width: 1750px)
+{
+    .main-content
+    {
+        width: 70%;
+        margin: auto;
+    }
+    .logo, 
+    .sign-up
+    {
+        padding: 2em 0;
+    }
+    .search-section
+    {
+        padding: 1em 0em;
+    }
+    #activites h2
+    {
+        margin: 0em 0em 1.3em 0em;
+    }
+    .activites-boxes
+    {
+        margin: 1.5em 0em;
+    }
+    .activites-box
+    {
+        flex: 1 1 180px;
+        margin: 1.5em 1em;
+    }
+}
