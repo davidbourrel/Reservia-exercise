@@ -153,18 +153,23 @@ form
     display: flex;
     padding: 1em;
 }
-input
+.search-input
 {
-    border: 1px solid var(--grey, #F2F2F2);
+    border-top: 1px solid var(--grey, #F2F2F2);
+    border-left: 1px solid var(--grey, #F2F2F2);
+    border-bottom: 1px solid var(--grey, #F2F2F2);
+    border-right: 0px solid var(--grey, #F2F2F2);
     border-radius: 0 10px 10px 0;
-    font-size: 0.9em;
-    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
     height: 49px;
+    max-height: 49px;
     outline: none;
     padding: 0.9em;
     width: 100%;
 }
-input:focus
+.search-input:focus
 {
     border: 1px solid var(--light-blue, #deebff);
     color: var(--blue, #0065fc);
@@ -272,6 +277,7 @@ button:active
     margin: 0.8em 2em;
     overflow: hidden;
     padding: 0.3em;
+    position: relative;
     transform: scale(1);
     transition: all 100ms ease-in-out;
 }
@@ -302,7 +308,9 @@ h3 + p
 }
 .popular-information .stars
 {
-   padding-top: 1.7em;
+    bottom: 0;
+    padding-bottom: 0.5em;
+    position: absolute;
 }
 .stars img
 {
@@ -612,7 +620,7 @@ footer a:hover
     nav
     {
         order: 0;
-        width: 25%;
+        width: 30%;
         margin-left: auto;
     }
     nav a
@@ -656,6 +664,8 @@ footer a:hover
     {
         border-top: 3px solid var(--blue, #0065fc);
     }
+
+    /* FIRST SECTION (search and filters)*/
     .search-box
     {
         margin-bottom: 2em;
@@ -665,10 +675,9 @@ footer a:hover
     {
         margin-bottom: 1em;
     }
-    input
+    .search-input
     {
         border-radius: 0;
-        height: 49px;
     }
     button
     {
@@ -681,17 +690,18 @@ footer a:hover
         border-radius: 0 15px 15px 0;
         color: #FFF;
         cursor: pointer;
-        display: inline;
-        font-weight: 600;
-        height: 23px;
-        max-width: 80px;
+        display: inline-flex;
+        font-size: 0.9em;
+        font-weight: 700;
+        height: 49px;
         outline: none;
+        padding: 0 1em;
         transform: scale(1);
         transition: all 150ms ease-in-out;
     }
     .submit:active
     {
-        transform: scale(0.98);
+        transform: scale(0.95);
     }
     .filters-container
     {
