@@ -293,6 +293,8 @@ button:active
 {
     border-radius: 15px 0 0 15px;
     max-width: 120px;
+    object-fit: cover;
+    width: 120px;
 }
 .popular-information
 {
@@ -358,6 +360,7 @@ h3 + p
 {
     border-radius: 15px 15px 0 0;
     height: 130px;
+    object-fit: cover;
 }
 .img-auberge-la-cannebiere
 {
@@ -452,6 +455,7 @@ h3 + p
     height: 130px;
     border-radius: 15px 15px 0 0;
     margin-bottom: 1em;
+    object-fit: cover;
 }
 .img-vieux-port
 {
@@ -722,6 +726,7 @@ footer a:hover
     {
         margin: 0 1.5em 0 0;
     }
+    /* SECOND SECTION (popular & hebergement) */ 
     .popular-and-hebergement-container
     {
         flex-flow: row;
@@ -758,6 +763,10 @@ footer a:hover
     .activites-boxes
     {
         flex-flow: row nowrap;
+    }
+    .double-card, .double-card-2
+    {
+        min-width: 300px;
     }
 }
 @media all and (min-width: 1750px)
