@@ -9,6 +9,7 @@ html
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 a
 {
@@ -797,5 +798,14 @@ footer a:hover
     {
         flex: 1 1 180px;
         margin: 1.5em 1em;
+    }
+}
+
+@media all and (min-width: 2450px)
+{
+    .main-content
+    {
+        width: 60%;
+        margin: auto;
     }
 }
