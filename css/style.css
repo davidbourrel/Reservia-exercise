@@ -532,12 +532,15 @@ footer a:hover
 {
     .hebergement-boxes
     {
-        display: flex;
-        flex-flow: row wrap;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem 1.3rem;
+        margin: 1.7em 2em;
     }
     .hebergement-box
     {
         flex: 1 1 290px;
+        margin: 0;   
     }
     .img-auberge-le-panier
     {
@@ -751,6 +754,12 @@ footer a:hover
         background-color: var(--grey, #F2F2F2);
         border-radius: 20px;
         margin-right: 2em;
+    }
+    .hebergement-boxes
+    {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.5rem 1.3rem;
+        margin: 1.6em 2em;
     }
     .hebergement-box
     {
